@@ -2,12 +2,10 @@
 
 Node.js + Express 5 + MySQL API for the DSA Sheet app: authentication, the structured sheet (chapters → topics → problems), progress tracking and the study calendar.
 
-- System design (HLD, DB schema, indexes, API, trade-offs): [docs/SYSTEM_DESIGN.md](docs/SYSTEM_DESIGN.md)
-- AWS deployment guide: [docs/DEPLOYMENT_AWS.md](docs/DEPLOYMENT_AWS.md)
 
 ## Run locally
 
-Requirements: Node.js 18+ and MySQL 8 (or MariaDB 10.4+, e.g. XAMPP).
+Requirements: Node.js 18+ and MySQL 8
 
 ```bash
 npm install
@@ -57,6 +55,3 @@ src/
 
 All endpoints except auth and health need `Authorization: Bearer <token>`.
 
-## Editing the sheet content
-
-Content lives in [src/db/seed-data.js](src/db/seed-data.js). To reseed, drop the database (`DROP DATABASE dsa_sheet;`) and run `npm run db:setup` again.

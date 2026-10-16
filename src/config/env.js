@@ -9,7 +9,7 @@ if (nodeEnv === "production" && !process.env.JWT_SECRET) {
 module.exports = {
   nodeEnv,
   port: Number(process.env.PORT) || 5000,
-  corsOrigin: "*"
+  corsOrigin: "*",
   jwtSecret: process.env.JWT_SECRET || "dev-only-secret",
   jwtExpiresIn: process.env.JWT_EXPIRES_IN || "7d",
   db: {
